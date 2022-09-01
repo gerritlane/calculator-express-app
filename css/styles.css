@@ -16,3 +16,11 @@ body {
 	align-items: center;
 	justify-content: space-between;
 }
+
+.calculator-button {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: center;
+	margin: 1rem;
+}
