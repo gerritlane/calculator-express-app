@@ -24,3 +24,14 @@ app.post('/index.html', (req, res) => {
   let result = num1 + num2;
   res.send(`The result of the calculation is ${result}`);
 });
+
+app.get('/bmi.html', (req, res) => {
+  res.sendFile(path.join(__dirname, '../bmi.html'));
+});
+
+app.post('/bmi.html', (req, res) => {
+  let weight = Number(req.body.weight);
+  let height = Number(req.body.height);
+  let bmi = weight * 703 / (height * height);
+  res.send(`Your BMI is ${bmi}`);
+});
